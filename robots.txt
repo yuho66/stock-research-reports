@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yuho66.github.io/stock-research-reports/sitemap.xml
