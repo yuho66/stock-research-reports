@@ -1,0 +1,948 @@
+{
+  "date": "2026-05-04",
+  "generatedAt": "2026-05-04T13:08:13.370Z",
+  "summary": {
+    "themes": 8,
+    "jpStocks": 10,
+    "usStocks": 9,
+    "topPicks": [
+      {
+        "type": "theme",
+        "name": "AIと宇宙開発の融合"
+      }
+    ]
+  },
+  "themes": [
+    {
+      "name": "AIと宇宙開発の融合",
+      "market": "US",
+      "structural_driver": "技術進化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "SpaceX",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "lOM7cqUGzo0",
+          "title": "【激変】SpaceX・OpenAI・Anthropicの上場でS&amp;P500はどうなるか？3兆ドルの地殻変動と投資家が知るべき「強制的買い」の正体とは？",
+          "channel": "YOU投資チャンネル",
+          "description": "スペースX：https://youtu.be/TfEJco1zHQ4 just keep buying：https://amzn.to/4umn8dt 2026年5月、ついに ...",
+          "publishedAt": "2026-05-02T06:00:00Z",
+          "url": "https://www.youtube.com/watch?v=lOM7cqUGzo0"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "◎強く推奨",
+        "confidence": "高",
+        "megatrend_fit": "AIと宇宙開発の融合は、国家安全保障、気候変動対策、インフラ強化など多角的な価値創造を可能にする。2026年以降のディープテック市場拡大と技術成熟が長期成長を後押しする。",
+        "early_signals": "AIの収益化加速、宇宙企業の上場動向、半導体需要増。Beyond Earth Venturesなどの投資拡大が実証済み。",
+        "why_not_mainstream_yet": "規制の不透明さ、高コストなR&D、技術的失敗リスク。市場浸透には時間が必要。",
+        "jp_stocks": [
+          "三菱重工",
+          "ISAO"
+        ],
+        "us_stocks": [
+          "Palantir",
+          "Lockheed Martin"
+        ],
+        "risks": [
+          "規制強化",
+          "技術的失敗",
+          "地政学リスク"
+        ],
+        "conclusion": "AIと宇宙開発の融合は2026年以降の成長が見込める。規制リスクを管理しつつ、米国・日本両市場の関連銘柄に分散投資を推奨。"
+      }
+    },
+    {
+      "name": "オンデバイスAI",
+      "market": "US",
+      "structural_driver": "技術進化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "AAPL",
+        "MSFT"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "F-AH8VtImmI",
+          "title": "【重要】米国株の決算ラッシュ到来！決算発表が100倍楽しくなる裏話。FANG+とメガ10構成銘柄はどうなる？S&amp;P500投資家のためのビッグテック業績分析！",
+          "channel": "YOU投資チャンネル",
+          "description": "今週は米国株市場の行方を左右する「超特大イベント」の連続です   アップル、グーグル、マイクロソフト、アマゾン、メタ ...",
+          "publishedAt": "2026-04-27T06:00:00Z",
+          "url": "https://www.youtube.com/watch?v=F-AH8VtImmI"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "AIインフラ投資",
+      "market": "US",
+      "structural_driver": "技術進化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "GOOGL",
+        "AMZN"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "F-AH8VtImmI",
+          "title": "【重要】米国株の決算ラッシュ到来！決算発表が100倍楽しくなる裏話。FANG+とメガ10構成銘柄はどうなる？S&amp;P500投資家のためのビッグテック業績分析！",
+          "channel": "YOU投資チャンネル",
+          "description": "今週は米国株市場の行方を左右する「超特大イベント」の連続です   アップル、グーグル、マイクロソフト、アマゾン、メタ ...",
+          "publishedAt": "2026-04-27T06:00:00Z",
+          "url": "https://www.youtube.com/watch?v=F-AH8VtImmI"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "オープンソースAIプラットフォーム",
+      "market": "US",
+      "structural_driver": "技術進化",
+      "recognition_stage": "黎明期",
+      "representative_stocks": [
+        "META"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "F-AH8VtImmI",
+          "title": "【重要】米国株の決算ラッシュ到来！決算発表が100倍楽しくなる裏話。FANG+とメガ10構成銘柄はどうなる？S&amp;P500投資家のためのビッグテック業績分析！",
+          "channel": "YOU投資チャンネル",
+          "description": "今週は米国株市場の行方を左右する「超特大イベント」の連続です   アップル、グーグル、マイクロソフト、アマゾン、メタ ...",
+          "publishedAt": "2026-04-27T06:00:00Z",
+          "url": "https://www.youtube.com/watch?v=F-AH8VtImmI"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "先端半導体製造技術",
+      "market": "JP",
+      "structural_driver": "AI・クラウドの普及によるデータセンター向け半導体需要の増大",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "東和",
+        "味の元",
+        "新越科学工業"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "7hESXzbV7XI",
+          "title": "【2026年最新】インテル暴騰、日本株市場で最も恩恵を受ける10大隠れたチャンピオン #半導体 #日本株 #株式投資",
+          "channel": "億りびとの羅針盤",
+          "description": "インテル株が28%暴騰し、市場は騒然としています。しかし、多くの人が「インテルか、AMDか、NVIDIAか」と完成品のスター ...",
+          "publishedAt": "2026-04-30T09:19:50Z",
+          "url": "https://www.youtube.com/watch?v=7hESXzbV7XI"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "AIインフラとデータセンター",
+      "market": "JP",
+      "structural_driver": "技術進化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "3778 桜インターネット"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "5lggNCriPU8",
+          "title": "【GW 明けの急落で】富裕層が見抜くテンバガー候補 4 銘柄の真層／PER 1110 倍の罠と 260 億円 M&amp;A の本物（3778・186A・215A・9166）",
+          "channel": "富裕層の教科書",
+          "description": "【GW 明けの急落で】本物の富裕層が見抜くテンバガー候補 4 銘柄を真層解剖します。 証券コード 3778 さくらインターネット ...",
+          "publishedAt": "2026-05-02T14:06:44Z",
+          "url": "https://www.youtube.com/watch?v=5lggNCriPU8"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "フィジカルAI",
+      "market": "JP",
+      "structural_driver": "技術進化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "ソフトバンクグループ",
+        "Nvidia"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "rjjEtbVeYYY",
+          "title": "【第2のAI相場!?】4000兆円市場の衝撃！フィジカルAIの全貌と国内代表銘柄10選を一気見！まるっと解説！",
+          "channel": "東京株式通信【日本株・米国株】",
+          "description": "動画概要 最近、株式投資において「フィジカルAI」という言葉、よく耳にするかと思います。 ChatGPTのような「画面の中の ...",
+          "publishedAt": "2026-04-30T10:01:27Z",
+          "url": "https://www.youtube.com/watch?v=rjjEtbVeYYY"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "ドローン防衛技術",
+      "market": "JP",
+      "structural_driver": "地政学的緊張と技術進化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "テラドローン"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "E1LXl9L82WU",
+          "title": "【株価大化け】ウクライナで実証された日本技術！最強の「新・防衛銘柄」テラドローンの衝撃",
+          "channel": "長期投資仙人",
+          "description": "いつもご視聴ありがとうございます。長期投資仙人です。 今回は、現代の安全保障のパラダイムシフトを引き起こし、株式市場 ...",
+          "publishedAt": "2026-05-03T02:00:11Z",
+          "url": "https://www.youtube.com/watch?v=E1LXl9L82WU"
+        }
+      ],
+      "claims": [],
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    }
+  ],
+  "jpStocks": [
+    {
+      "name": "三菱マテリアル",
+      "code": "",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "uiDVbWHsAGU",
+          "title": "【新フェーズ】レアアースは「掘る」から「再利用」へ。政府決定で資金が流れる大化け必至の&quot;再利用&quot;テーマ株8選。",
+          "channel": "【話題株】深掘りラボ",
+          "description": "中国からのレアアース輸出が止まったら、日本の産業は終わる…」そんな経済安全保障の危機を救うため、日本政府が本気で ...",
+          "publishedAt": "2026-04-30T10:36:31Z",
+          "url": "https://www.youtube.com/watch?v=uiDVbWHsAGU"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "独自の高度なレアメタル回収技術と垂直統合型サプライチェーンで、EVや再生可能エネルギー分野での需要増加に対応。",
+      "growth_driver": "リサイクル技術革新",
+      "recognition_stage": "認知拡大中",
+      "verdictData": {
+        "verdict": "○推奨",
+        "confidence": "中",
+        "structural_thesis": "資源循環政策と政府資金支援により、レアアース再利用事業が成長基盤。非鉄金属価格安定化と電子材料需要拡大が収益を支える。",
+        "growth_drivers": [
+          "政府主導のレアアース再利用事業への資金流入",
+          "電子材料・自動車部材需要の拡大",
+          "資源開発・リサイクル事業の収益改善"
+        ],
+        "why_not_mainstream_yet": "資源循環分野の成長性はまだ一般投資家に認知されず、政府支援の具体化が未定。",
+        "financial_assessment": "目標株価引き上げで市場評価向上。経常予想微減だが、資源価格安定化で収益性改善期待。",
+        "risks": [
+          "非鉄金属価格変動リスク",
+          "環境規制強化によるコスト増"
+        ],
+        "conclusion": "資源循環政策と政府支援が中長期成長の鍵。財務改善期待と市場評価向上を考慮し、推奨。ただし資源価格変動リスクに注意。",
+        "_verifiedName": "三菱マテリアル",
+        "_verifiedCode": ""
+      }
+    },
+    {
+      "name": "Mitsubishi Kakoki Kaisha, Ltd.",
+      "code": "6331.T",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "jAChXoF2a6Y",
+          "title": "【国策始動】日本が本気。水素・アンモニア発電で化ける株5選(AI-Z On)",
+          "channel": "Ai-Z",
+          "description": "AIデータセンター需要などにより、電力不足が顕在化している今、 エネルギー革命をもたらす、水素・アンモニア発電が、 ...",
+          "publishedAt": "2026-05-03T21:00:40Z",
+          "url": "https://www.youtube.com/watch?v=jAChXoF2a6Y"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "水素インフラの本命株。国内唯一の駅化水素製造と全国53箇所の水素ステーション運営により、今まさに現実の売上として計上されている。2026年以降の量産フェーズ移行が期待される。",
+      "growth_driver": "脱炭素",
+      "recognition_stage": "認知拡大中",
+      "verdictData": {
+        "verdict": "○推奨",
+        "confidence": "中",
+        "structural_thesis": "水素・アンモニア発電技術の商用化とエネルギー転換需要の拡大が中長期成長を牽引。安定した業績基盤と株主還元方針が投資価値を裏付け。",
+        "growth_drivers": [
+          "水素・アンモニア発電技術の市場浸透",
+          "エネルギー転換関連需要の増加",
+          "安定した配当と内部留保活用"
+        ],
+        "why_not_mainstream_yet": "エネルギー転換関連銘柄の投資サイクルが長期化しており、短期的な利益実現までの猶予が投資家心理を抑制。",
+        "financial_assessment": "PER 12.2倍は適正水準。PBR 1.82倍は成長期待を反映。業績予想は安定成長を示唆。",
+        "risks": [
+          "エネルギー政策の急変",
+          "技術開発の遅延リスク"
+        ],
+        "conclusion": "中長期投資に適した銘柄。エネルギー転換需要と安定経営が成長基盤を形成。ただし、技術進捗と市場環境の監視が必要。",
+        "_verifiedName": "Mitsubishi Kakoki Kaisha, Ltd.",
+        "_verifiedCode": "6331.T"
+      }
+    },
+    {
+      "name": "JX金属",
+      "code": "",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "uiDVbWHsAGU",
+          "title": "【新フェーズ】レアアースは「掘る」から「再利用」へ。政府決定で資金が流れる大化け必至の&quot;再利用&quot;テーマ株8選。",
+          "channel": "【話題株】深掘りラボ",
+          "description": "中国からのレアアース輸出が止まったら、日本の産業は終わる…」そんな経済安全保障の危機を救うため、日本政府が本気で ...",
+          "publishedAt": "2026-04-30T10:36:31Z",
+          "url": "https://www.youtube.com/watch?v=uiDVbWHsAGU"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "レアアースのリサイクルと資源開発を両輪に、循環型経済を牽引。政府の1兆円投資による恩恵が期待される。",
+      "growth_driver": "都市鉱山からのリサイクル技術",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "JX金属",
+        "_verifiedCode": ""
+      }
+    },
+    {
+      "name": "Mitsubishi Electric Corporation",
+      "code": "6503.T",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "jAChXoF2a6Y",
+          "title": "【国策始動】日本が本気。水素・アンモニア発電で化ける株5選(AI-Z On)",
+          "channel": "Ai-Z",
+          "description": "AIデータセンター需要などにより、電力不足が顕在化している今、 エネルギー革命をもたらす、水素・アンモニア発電が、 ...",
+          "publishedAt": "2026-05-03T21:00:40Z",
+          "url": "https://www.youtube.com/watch?v=jAChXoF2a6Y"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "GX事業を1年で316%成長させた実績を持つ。水素製造装置ハイジェイヤシリーズの売上増加が見込まれる。",
+      "growth_driver": "脱炭素",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Mitsubishi Electric Corporation",
+        "_verifiedCode": "6503.T"
+      }
+    },
+    {
+      "name": "千田高校建設",
+      "code": "",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "jAChXoF2a6Y",
+          "title": "【国策始動】日本が本気。水素・アンモニア発電で化ける株5選(AI-Z On)",
+          "channel": "Ai-Z",
+          "description": "AIデータセンター需要などにより、電力不足が顕在化している今、 エネルギー革命をもたらす、水素・アンモニア発電が、 ...",
+          "publishedAt": "2026-05-03T21:00:40Z",
+          "url": "https://www.youtube.com/watch?v=jAChXoF2a6Y"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "スペラ水素システムでトヨタ本射工場への導入が予定され、2026年度から実用化が始まる。",
+      "growth_driver": "脱炭素",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "千田高校建設",
+        "_verifiedCode": ""
+      }
+    },
+    {
+      "name": "JPYC株式会社",
+      "code": "",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "SslsLTMSqho",
+          "title": "SBI北尾社長「JPYCは潰れる」日本円ステーブルコイン戦争の勝者は誰？",
+          "channel": "アンゴロウ【暗号資産攻略】",
+          "description": "SBIがJPYCに宣戦布告。円建てステーブルコインの覇権を握るのは、先行のJPYCか巨大資本のSBI（JPYSC）か？100万円の壁が ...",
+          "publishedAt": "2026-05-03T10:03:04Z",
+          "url": "https://www.youtube.com/watch?v=SslsLTMSqho"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "JPYCは日本初の電子決済手段としての円建てステーブルコインを発行しており、中長期的には3年で10兆円を目指す。SBIが参入する可能性があるものの、JPYCは既存ユーザー向けにDeFiでの運用や二次流通市場への流動性提供など独自の強みを持つ。",
+      "growth_driver": "デジタル決済需要",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "中",
+        "structural_thesis": "日本初円建てステーブルコインの独占性、Circle提携によるグローバル展開、216億円規模の取引高拡大が基盤。規制対応と技術革新で競争優位性を維持可能。",
+        "growth_drivers": [
+          "累計取引高216億円への急成長",
+          "Circleとの提携による海外展開",
+          "日本国内のデジタル通貨普及促進"
+        ],
+        "why_not_mainstream_yet": "ステーブルコイン市場の認知度低さ、規制未定、競合他社との差別化課題。",
+        "financial_assessment": "財務データ不可。取引高拡大は収益性向上の兆候だが、事業モデルの持続性不明。",
+        "risks": [
+          "暗号資産規制強化",
+          "競合ステーブルコインの台頭",
+          "技術的ハッキングリスク"
+        ],
+        "conclusion": "早期成長段階だが、財務不透明と規制リスクが懸念。中長期では市場拡大で評価向上の可能性。慎重な資金配分を推奨。",
+        "_verifiedName": "JPYC株式会社",
+        "_verifiedCode": ""
+      }
+    },
+    {
+      "name": "Aiphone Co.,Ltd.",
+      "code": "6718.T",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "u269OHYjeGA",
+          "title": "AI革命の「裏の本命」・浜松ホトニクスで狙うテンバガーへの道",
+          "channel": "カブ耳ラジオ",
+          "description": "無料公開中✨】 伝説のファンドマネージャーが教える、投資の絶対ルールとは？ https://x.gd/dzYJV ✉️ メールアドレスの登録 ...",
+          "publishedAt": "2026-04-27T10:01:18Z",
+          "url": "https://www.youtube.com/watch?v=u269OHYjeGA"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "AI革命におけるデータセンターの電力と熱問題を解決するシリコンフォトニクス技術で、2025年以降V字回復を見込む。CPO技術による光通信市場の成長が大きな追い風となる。",
+      "growth_driver": "AI需要",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Aiphone Co.,Ltd.",
+        "_verifiedCode": "6718.T"
+      }
+    },
+    {
+      "name": "TDK Corporation",
+      "code": "6762.T",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "uiDVbWHsAGU",
+          "title": "【新フェーズ】レアアースは「掘る」から「再利用」へ。政府決定で資金が流れる大化け必至の&quot;再利用&quot;テーマ株8選。",
+          "channel": "【話題株】深掘りラボ",
+          "description": "中国からのレアアース輸出が止まったら、日本の産業は終わる…」そんな経済安全保障の危機を救うため、日本政府が本気で ...",
+          "publishedAt": "2026-04-30T10:36:31Z",
+          "url": "https://www.youtube.com/watch?v=uiDVbWHsAGU"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "レアアースの使用量を大幅に削減する独自技術とリサイクル事業で、サプライチェーンの安定化と循環型社会への貢献。",
+      "growth_driver": "素材レベルでの脱レアアース化",
+      "recognition_stage": "主流",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "TDK Corporation",
+        "_verifiedCode": "6762.T"
+      }
+    },
+    {
+      "name": "松田産業",
+      "code": "",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "uiDVbWHsAGU",
+          "title": "【新フェーズ】レアアースは「掘る」から「再利用」へ。政府決定で資金が流れる大化け必至の&quot;再利用&quot;テーマ株8選。",
+          "channel": "【話題株】深掘りラボ",
+          "description": "中国からのレアアース輸出が止まったら、日本の産業は終わる…」そんな経済安全保障の危機を救うため、日本政府が本気で ...",
+          "publishedAt": "2026-04-30T10:36:31Z",
+          "url": "https://www.youtube.com/watch?v=uiDVbWHsAGU"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "電子部品廃棄物からの基金属リサイクルと食品事業で、地球資源の有効活用を推進。海外ネットワークも強み。",
+      "growth_driver": "グローバルな資源循環システム構築",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "松田産業",
+        "_verifiedCode": ""
+      }
+    },
+    {
+      "name": "中京工業",
+      "code": "",
+      "market": "JP",
+      "sourceVideos": [
+        {
+          "videoId": "jAChXoF2a6Y",
+          "title": "【国策始動】日本が本気。水素・アンモニア発電で化ける株5選(AI-Z On)",
+          "channel": "Ai-Z",
+          "description": "AIデータセンター需要などにより、電力不足が顕在化している今、 エネルギー革命をもたらす、水素・アンモニア発電が、 ...",
+          "publishedAt": "2026-05-03T21:00:40Z",
+          "url": "https://www.youtube.com/watch?v=jAChXoF2a6Y"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "アンモニア戦バーナーの実用化を中期経営計画に掲げ、2026年度中の量産受注開始が予定されている。",
+      "growth_driver": "脱炭素",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "中京工業",
+        "_verifiedCode": ""
+      }
+    }
+  ],
+  "usStocks": [
+    {
+      "name": "Alphabet Inc.",
+      "code": "GOOGL",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "AmO6xAcaH8U",
+          "title": "Cathie Wood Sees Something HUGE -  She’s Just Bought 3 Under-The-Radar Stocks - Are You Missing??",
+          "channel": "StockInvestmentEmpire",
+          "description": "aistocks #crypto #cathiewood #growthstocks #investing Cathie Wood is making bold moves again — and smart investors are ...",
+          "publishedAt": "2026-05-01T18:00:18Z",
+          "url": "https://www.youtube.com/watch?v=AmO6xAcaH8U"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "Cathie WoodはGoogleのAI戦略とクラウド事業の成長性を高く評価。特に企業向けAIソリューションへの需要増加が見込まれ、今後の収益拡大に寄与すると予測。",
+      "growth_driver": "AI需要",
+      "recognition_stage": "主流化前夜",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Alphabet Inc.",
+        "_verifiedCode": "GOOGL"
+      }
+    },
+    {
+      "name": "Meta Platforms, Inc.",
+      "code": "META",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "AmO6xAcaH8U",
+          "title": "Cathie Wood Sees Something HUGE -  She’s Just Bought 3 Under-The-Radar Stocks - Are You Missing??",
+          "channel": "StockInvestmentEmpire",
+          "description": "aistocks #crypto #cathiewood #growthstocks #investing Cathie Wood is making bold moves again — and smart investors are ...",
+          "publishedAt": "2026-05-01T18:00:18Z",
+          "url": "https://www.youtube.com/watch?v=AmO6xAcaH8U"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "Cathie WoodはMetaのAI技術とソーシャルメディアプラットフォームの強さを評価。特にAIが広告収益に与える影響や、新サービスThreadsの成長性を見込む。",
+      "growth_driver": "AI需要",
+      "recognition_stage": "主流化前夜",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Meta Platforms, Inc.",
+        "_verifiedCode": "META"
+      }
+    },
+    {
+      "name": "LG CNS",
+      "code": "011790.KS",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "fcMe0jE9PBs",
+          "title": "💥LG씨엔에스 - [긴급] 세계 1위 기업들의 끊임없는 러브콜 → 목표주가 싹 갈아 엎습니다",
+          "channel": "백프로의 주식솔루션",
+          "description": "하루에 LG그룹에서 두 가지 호재가 동시에 터졌습니다.* LG전자 류재철 사장이 젠슨 황 엔비디아 CEO의 장녀 매디슨 황 수석이사와 ...",
+          "publishedAt": "2026-05-02T06:06:55Z",
+          "url": "https://www.youtube.com/watch?v=fcMe0jE9PBs"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "LG CNSは、世界トップ企業からの連続的な提携や受注により、中長期的に大きな成長が見込まれる。特にAIやデジタルトランスフォーメーションの分野で強固な地位を築いている。",
+      "growth_driver": "AI需要",
+      "recognition_stage": "認知拡大中",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "LG CNS",
+        "_verifiedCode": "011790.KS"
+      }
+    },
+    {
+      "name": "Robinhood Markets, Inc.",
+      "code": "HOOD",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "AmO6xAcaH8U",
+          "title": "Cathie Wood Sees Something HUGE -  She’s Just Bought 3 Under-The-Radar Stocks - Are You Missing??",
+          "channel": "StockInvestmentEmpire",
+          "description": "aistocks #crypto #cathiewood #growthstocks #investing Cathie Wood is making bold moves again — and smart investors are ...",
+          "publishedAt": "2026-05-01T18:00:18Z",
+          "url": "https://www.youtube.com/watch?v=AmO6xAcaH8U"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "Cathie Woodは仮想通貨取引プラットフォームの成長性を評価。特にAI技術や新規ユーザー獲得戦略が今後の収益拡大に寄与すると予測。",
+      "growth_driver": "仮想通貨需要",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Robinhood Markets, Inc.",
+        "_verifiedCode": "HOOD"
+      }
+    },
+    {
+      "name": "Advanced Micro Devices, Inc.",
+      "code": "AMD",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "ipcWp4Mqgh0",
+          "title": "Best 3 Stocks to Buy Now – Future Tech Giants Ready to Explode",
+          "channel": "Life after 50",
+          "description": "Are you 45, 50, or beyond and wondering where to put your money in today's market? In this video, we break down 3 ...",
+          "publishedAt": "2026-04-30T17:01:05Z",
+          "url": "https://www.youtube.com/watch?v=ipcWp4Mqgh0"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "AMDはAIアクセラレータ市場でNVIDIAと直接競争し、データセンター事業が急速に成長しています。今後数年間でAIインフラストラクチャの構築が進む中、その需要を先取りする可能性があります。",
+      "growth_driver": "AI需要",
+      "recognition_stage": "認知拡大中",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Advanced Micro Devices, Inc.",
+        "_verifiedCode": "AMD"
+      }
+    },
+    {
+      "name": "The Boeing Company",
+      "code": "BA",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "Fk2o2ByweNQ",
+          "title": "4 Stocks the Market Is Getting WRONG Right Now",
+          "channel": "Mark Roussin, CPA",
+          "description": "SIGN UP for my newsletter The Stock Investor's Edge: https://go.roussinfinancial.com/subscribe JOIN my Discord and stay up to ...",
+          "publishedAt": "2026-04-28T15:00:33Z",
+          "url": "https://www.youtube.com/watch?v=Fk2o2ByweNQ"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "YouTuberは、ボーイングの株価が市場によって過小評価されていると主張し、航空機需要の持続性や供給制限緩和による収益増加を指摘。2027年には8ドル以上のEPSを見込む。",
+      "growth_driver": "航空機需要拡大",
+      "recognition_stage": "認知拡大中",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "The Boeing Company",
+        "_verifiedCode": "BA"
+      }
+    },
+    {
+      "name": "Altimmune, Inc.",
+      "code": "ALT",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "Hf1vFILUItE",
+          "title": "알테오젠, 이미 시작됐다… 5월 데이터가 터진다",
+          "channel": "주식사관학교",
+          "description": "4월 한달간 알테오젠 주가는 9.26% 상승하며 장기 상승추세의 기준라인인 308000원을 잘 지키고 반등하는 데 성공했습니다.",
+          "publishedAt": "2026-05-02T07:45:01Z",
+          "url": "https://www.youtube.com/watch?v=Hf1vFILUItE"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "アルテ오젠は4月に9.26%の株価上昇を記録し、308,000ウォンの長期的なサポートラインを維持しました。5月には重要なデータが発表される予定で、これが今後の成長を後押しすると期待されています。",
+      "growth_driver": "医療",
+      "recognition_stage": "黎明期",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Altimmune, Inc.",
+        "_verifiedCode": "ALT"
+      }
+    },
+    {
+      "name": "Virgin Galactic Holdings, Inc.",
+      "code": "SPCE",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "0-1i1awbGgw",
+          "title": "THIS CHANGES EVERYTHING",
+          "channel": "Meet Kevin",
+          "description": "Couponcode GoodByePowell expires May 8 at 11:59pm. Alpha Membership: https://MeetKevin.com ReinvestAI: ...",
+          "publishedAt": "2026-05-03T19:20:21Z",
+          "url": "https://www.youtube.com/watch?v=0-1i1awbGgw"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "YouTuberは、デローカル化と保護主義の動きの中で、各国が自国のインフラを構築する必要性が高まると指摘。これにより宇宙開発や人工衛星通信などの分野で成長が見込まれる。",
+      "growth_driver": "宇宙開発需要",
+      "recognition_stage": "認知拡大中",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "中",
+        "structural_thesis": "次世代宇宙船開発で技術革新を推進し、商業宇宙旅行市場の拡大と政府・民間契約の獲得が中長期成長の鍵。",
+        "growth_drivers": [
+          "Deltaクラス宇宙船開発によるコスト削減と性能向上",
+          "NASA・ESAなどの政府宇宙開発契約の獲得",
+          "民間宇宙旅行需要の増加による収益拡大"
+        ],
+        "why_not_mainstream_yet": "未採算の事業継続と高リスク開発投資が主流投資家の警戒対象。市場は短期収益重視で評価を抑制。",
+        "financial_assessment": "PER未定義・フリーキャッシュフロー赤字だが、PBR 0.71で割安。開発投資が収益化の転換点に。",
+        "risks": [
+          "開発遅延によるコスト超過",
+          "競合他社（SpaceXなど）の技術進出"
+        ],
+        "conclusion": "技術革新と市場拡大のポテンシャルは高いが、財務健全性と収益化のタイミングが不透明。中長期投資には様子見が適切。",
+        "_verifiedName": "Virgin Galactic Holdings, Inc.",
+        "_verifiedCode": "SPCE"
+      }
+    },
+    {
+      "name": "Deutsche Bank Aktiengesellschaft",
+      "code": "DB",
+      "market": "US",
+      "sourceVideos": [
+        {
+          "videoId": "0-1i1awbGgw",
+          "title": "THIS CHANGES EVERYTHING",
+          "channel": "Meet Kevin",
+          "description": "Couponcode GoodByePowell expires May 8 at 11:59pm. Alpha Membership: https://MeetKevin.com ReinvestAI: ...",
+          "publishedAt": "2026-05-03T19:20:21Z",
+          "url": "https://www.youtube.com/watch?v=0-1i1awbGgw"
+        }
+      ],
+      "claims": [],
+      "youtuber_claim": "YouTuberは、Bank of Americaのレポートを引用し、政府支出が増加すると予測。これにより金融機関も恩恵を受け、特にドイツ銀行のような大手銀行はその恩恵を受ける可能性がある。",
+      "growth_driver": "政府支出拡大",
+      "recognition_stage": "主流",
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Deutsche Bank Aktiengesellschaft",
+        "_verifiedCode": "DB"
+      }
+    }
+  ]
+}

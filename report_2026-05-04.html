@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>投資シグナルレポート 2026-05-04</title>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Hiragino Sans','Yu Gothic','Meiryo',sans-serif;
+       background:#0d1b2a; color:#cdd6f4; line-height:1.6; }
+.header { background:linear-gradient(135deg,#1e3a5f,#0d1b2a);
+          padding:32px 20px; text-align:center; border-bottom:2px solid #2a4a7f; }
+.header h1 { font-size:26px; color:#89b4fa; letter-spacing:2px; }
+.header .sub { color:#6c7086; margin-top:6px; font-size:14px; }
+.stats { display:flex; justify-content:center; gap:20px; padding:20px; flex-wrap:wrap; }
+.stat { background:#1e2d40; padding:16px 28px; border-radius:10px; text-align:center; min-width:110px; cursor:pointer; transition:background .2s; }
+.stat:hover { background:#243447; }
+.stat-n { font-size:32px; font-weight:bold; color:#89b4fa; }
+.stat-l { font-size:12px; color:#6c7086; margin-top:4px; }
+.main-tabs { display:flex; gap:6px; padding:0 20px 0; max-width:1100px; margin:0 auto; }
+.main-tab { padding:12px 28px; border-radius:10px 10px 0 0; border:none; cursor:pointer;
+            font-size:15px; font-weight:bold; background:#1e2d40; color:#6c7086; transition:all .2s; }
+.main-tab.active { background:#243447; color:#89b4fa; border-bottom:3px solid #89b4fa; }
+.main-tab:hover:not(.active) { background:#1a2a3a; color:#cdd6f4; }
+.tab-panel { display:none; }
+.tab-panel.active { display:block; }
+.container { max-width:1100px; margin:0 auto; padding:16px 20px 40px; }
+.card { background:#1e2d40; border-radius:12px; margin-bottom:18px;
+        overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
+.card-head { padding:18px 20px; background:#162535;
+             display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.name { font-size:20px; font-weight:bold; flex:1; min-width:200px; }
+.code { background:#243447; padding:2px 9px; border-radius:4px; font-size:13px; color:#89dceb; }
+.badge { padding:3px 11px; border-radius:12px; font-size:12px; font-weight:bold; }
+.badge-jp   { background:#1a3d5c; color:#74c7ec; }
+.badge-us   { background:#3d1a1a; color:#f38ba8; }
+.badge-both { background:#1a3d2a; color:#a6e3a1; }
+.verdict { padding:5px 16px; border-radius:20px; font-weight:bold; color:#fff; font-size:14px; white-space:nowrap; }
+.conf { font-size:12px; color:#6c7086; }
+.body { padding:20px; }
+.lbl { font-size:11px; color:#89b4fa; font-weight:bold;
+       text-transform:uppercase; letter-spacing:1px; margin:18px 0 7px; }
+.lbl:first-child { margin-top:0; }
+p { font-size:14px; color:#bac2de; }
+ul { padding-left:20px; font-size:14px; color:#f38ba8; }
+li { margin-bottom:4px; }
+.sources { display:flex; flex-wrap:wrap; gap:7px; }
+.src { color:#74c7ec; padding:3px 10px; border-radius:12px; font-size:12px;
+       background:#1a3d5c; text-decoration:none; transition:background .15s; }
+.src:hover { background:#2a5a8c; }
+.conclusion { background:#162535; border-radius:8px; padding:16px;
+              font-size:14px; color:#cdd6f4; border-left:3px solid #89b4fa; }
+.stocks-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; margin-top:4px; }
+.stock-chip { background:#243447; padding:6px 12px; border-radius:6px; font-size:13px; color:#a6e3a1; }
+.no-data { color:#45475a; padding:20px; text-align:center; }
+.chart-section { margin-top:18px; }
+.chart-tabs { display:flex; gap:6px; margin-bottom:8px; }
+.ctab { padding:5px 16px; border:1px solid #2a4a7f; border-radius:6px;
+        background:transparent; color:#6c7086; cursor:pointer; font-size:13px; transition:all .15s; }
+.ctab.active { background:#1a3d5c; color:#89b4fa; border-color:#89b4fa; }
+.ctab:hover:not(.active) { background:#1a2a3a; color:#cdd6f4; }
+.chart-wrap { border-radius:8px; overflow:hidden; background:#0d1b2a; width:100%; height:400px; }
+</style>
+<script src="https://s3.tradingview.com/tv.js"></script>
+</head>
+<body>
+<div class="header">
+  <h1>📊 投資シグナルレポート</h1>
+  <div class="sub">2026-05-04 ｜ YouTube深層分析 × ディープリサーチ統合</div>
+</div>
+<div class="stats">
+  <div class="stat" onclick="switchTab('themes')"><div class="stat-n">8</div><div class="stat-l">🌏 注目テーマ</div></div>
+  <div class="stat" onclick="switchTab('jp')"><div class="stat-n">10</div><div class="stat-l">🇯🇵 日本株候補</div></div>
+  <div class="stat" onclick="switchTab('us')"><div class="stat-n">9</div><div class="stat-l">🇺🇸 米国株候補</div></div>
+</div>
+<div class="main-tabs">
+  <button class="main-tab active" data-tab="themes" onclick="switchTab('themes')">🌏 テーマ（8）</button>
+  <button class="main-tab" data-tab="jp" onclick="switchTab('jp')">🇯🇵 日本株（10）</button>
+  <button class="main-tab" data-tab="us" onclick="switchTab('us')">🇺🇸 米国株（9）</button>
+</div>
+<div class="container">
+  <div id="tab-themes" class="tab-panel active">
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #00c851">
+    <span class="name">🌏 AIと宇宙開発の融合</span>
+    <span class="badge badge-us">対象: US</span>
+    <span class="verdict" style="background:#00c851">◎強く推奨</span>
+    <span class="conf">確信度: 高</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=lOM7cqUGzo0" target="_blank" rel="noopener">YOU投資チャンネル</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>AIと宇宙開発の融合は、国家安全保障、気候変動対策、インフラ強化など多角的な価値創造を可能にする。2026年以降のディープテック市場拡大と技術成熟が長期成長を後押しする。</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>AIの収益化加速、宇宙企業の上場動向、半導体需要増。Beyond Earth Venturesなどの投資拡大が実証済み。</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>規制の不透明さ、高コストなR&amp;D、技術的失敗リスク。市場浸透には時間が必要。</p>
+    <div class="lbl">🇯🇵 日本の注目銘柄</div><div class="stocks-grid"><span class="stock-chip">三菱重工</span><span class="stock-chip">ISAO</span></div>
+    <div class="lbl">🇺🇸 米国の注目銘柄</div><div class="stocks-grid"><span class="stock-chip">Palantir</span><span class="stock-chip">Lockheed Martin</span></div>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>規制強化</li><li>技術的失敗</li><li>地政学リスク</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">AIと宇宙開発の融合は2026年以降の成長が見込める。規制リスクを管理しつつ、米国・日本両市場の関連銘柄に分散投資を推奨。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 オンデバイスAI</span>
+    <span class="badge badge-us">対象: US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=F-AH8VtImmI" target="_blank" rel="noopener">YOU投資チャンネル</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 AIインフラ投資</span>
+    <span class="badge badge-us">対象: US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=F-AH8VtImmI" target="_blank" rel="noopener">YOU投資チャンネル</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 オープンソースAIプラットフォーム</span>
+    <span class="badge badge-us">対象: US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=F-AH8VtImmI" target="_blank" rel="noopener">YOU投資チャンネル</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 先端半導体製造技術</span>
+    <span class="badge badge-jp">対象: JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=7hESXzbV7XI" target="_blank" rel="noopener">億りびとの羅針盤</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 AIインフラとデータセンター</span>
+    <span class="badge badge-jp">対象: JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=5lggNCriPU8" target="_blank" rel="noopener">富裕層の教科書</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 フィジカルAI</span>
+    <span class="badge badge-jp">対象: JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=rjjEtbVeYYY" target="_blank" rel="noopener">東京株式通信【日本株・米国株】</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">🌏 ドローン防衛技術</span>
+    <span class="badge badge-jp">対象: JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=E1LXl9L82WU" target="_blank" rel="noopener">長期投資仙人</a></div>
+    <div class="lbl">🌐 乗るメガトレンドとの接続</div>
+    <p>分析エラー</p>
+    <div class="lbl">📡 早期シグナル</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ市場に織り込まれていないのか</div>
+    <p>分析エラー</p>
+    
+    
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・主流化のトリガー・投資戦略</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div></div>
+  <div id="tab-jp"     class="tab-panel">
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #29b6f6">
+    <span class="name">三菱マテリアル</span>
+    
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#29b6f6">○推奨</span>
+    <span class="conf">確信度: 中</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=uiDVbWHsAGU" target="_blank" rel="noopener">【話題株】深掘りラボ</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>資源循環政策と政府資金支援により、レアアース再利用事業が成長基盤。非鉄金属価格安定化と電子材料需要拡大が収益を支える。</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>政府主導のレアアース再利用事業への資金流入,電子材料・自動車部材需要の拡大,資源開発・リサイクル事業の収益改善</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>資源循環分野の成長性はまだ一般投資家に認知されず、政府支援の具体化が未定。</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>目標株価引き上げで市場評価向上。経常予想微減だが、資源価格安定化で収益性改善期待。</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>非鉄金属価格変動リスク</li><li>環境規制強化によるコスト増</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">資源循環政策と政府支援が中長期成長の鍵。財務改善期待と市場評価向上を考慮し、推奨。ただし資源価格変動リスクに注意。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #29b6f6">
+    <span class="name">Mitsubishi Kakoki Kaisha, Ltd.</span>
+    <span class="code">6331.T</span>
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#29b6f6">○推奨</span>
+    <span class="conf">確信度: 中</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（TSE:6331）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc1','TSE:6331','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc1','TSE:6331','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc1','TSE:6331','D',this)">日足</button>
+  </div>
+  <div id="tvc1" class="chart-wrap" data-sym="TSE:6331" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=jAChXoF2a6Y" target="_blank" rel="noopener">Ai-Z</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>水素・アンモニア発電技術の商用化とエネルギー転換需要の拡大が中長期成長を牽引。安定した業績基盤と株主還元方針が投資価値を裏付け。</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>水素・アンモニア発電技術の市場浸透,エネルギー転換関連需要の増加,安定した配当と内部留保活用</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>エネルギー転換関連銘柄の投資サイクルが長期化しており、短期的な利益実現までの猶予が投資家心理を抑制。</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>PER 12.2倍は適正水準。PBR 1.82倍は成長期待を反映。業績予想は安定成長を示唆。</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>エネルギー政策の急変</li><li>技術開発の遅延リスク</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">中長期投資に適した銘柄。エネルギー転換需要と安定経営が成長基盤を形成。ただし、技術進捗と市場環境の監視が必要。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">JX金属</span>
+    
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=uiDVbWHsAGU" target="_blank" rel="noopener">【話題株】深掘りラボ</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Mitsubishi Electric Corporation</span>
+    <span class="code">6503.T</span>
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（TSE:6503）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc3','TSE:6503','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc3','TSE:6503','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc3','TSE:6503','D',this)">日足</button>
+  </div>
+  <div id="tvc3" class="chart-wrap" data-sym="TSE:6503" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=jAChXoF2a6Y" target="_blank" rel="noopener">Ai-Z</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">千田高校建設</span>
+    
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=jAChXoF2a6Y" target="_blank" rel="noopener">Ai-Z</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">JPYC株式会社</span>
+    
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 中</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=SslsLTMSqho" target="_blank" rel="noopener">アンゴロウ【暗号資産攻略】</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>日本初円建てステーブルコインの独占性、Circle提携によるグローバル展開、216億円規模の取引高拡大が基盤。規制対応と技術革新で競争優位性を維持可能。</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>累計取引高216億円への急成長,Circleとの提携による海外展開,日本国内のデジタル通貨普及促進</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>ステーブルコイン市場の認知度低さ、規制未定、競合他社との差別化課題。</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>財務データ不可。取引高拡大は収益性向上の兆候だが、事業モデルの持続性不明。</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>暗号資産規制強化</li><li>競合ステーブルコインの台頭</li><li>技術的ハッキングリスク</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">早期成長段階だが、財務不透明と規制リスクが懸念。中長期では市場拡大で評価向上の可能性。慎重な資金配分を推奨。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Aiphone Co.,Ltd.</span>
+    <span class="code">6718.T</span>
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（TSE:6718）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc6','TSE:6718','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc6','TSE:6718','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc6','TSE:6718','D',this)">日足</button>
+  </div>
+  <div id="tvc6" class="chart-wrap" data-sym="TSE:6718" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=u269OHYjeGA" target="_blank" rel="noopener">カブ耳ラジオ</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">TDK Corporation</span>
+    <span class="code">6762.T</span>
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（TSE:6762）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc7','TSE:6762','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc7','TSE:6762','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc7','TSE:6762','D',this)">日足</button>
+  </div>
+  <div id="tvc7" class="chart-wrap" data-sym="TSE:6762" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=uiDVbWHsAGU" target="_blank" rel="noopener">【話題株】深掘りラボ</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">松田産業</span>
+    
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=uiDVbWHsAGU" target="_blank" rel="noopener">【話題株】深掘りラボ</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">中京工業</span>
+    
+    <span class="badge badge-jp">JP</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=jAChXoF2a6Y" target="_blank" rel="noopener">Ai-Z</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div></div>
+  <div id="tab-us"     class="tab-panel">
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Alphabet Inc.</span>
+    <span class="code">GOOGL</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（GOOGL）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc10','GOOGL','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc10','GOOGL','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc10','GOOGL','D',this)">日足</button>
+  </div>
+  <div id="tvc10" class="chart-wrap" data-sym="GOOGL" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=AmO6xAcaH8U" target="_blank" rel="noopener">StockInvestmentEmpire</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Meta Platforms, Inc.</span>
+    <span class="code">META</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（META）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc11','META','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc11','META','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc11','META','D',this)">日足</button>
+  </div>
+  <div id="tvc11" class="chart-wrap" data-sym="META" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=AmO6xAcaH8U" target="_blank" rel="noopener">StockInvestmentEmpire</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">LG CNS</span>
+    <span class="code">011790.KS</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=fcMe0jE9PBs" target="_blank" rel="noopener">백프로의 주식솔루션</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Robinhood Markets, Inc.</span>
+    <span class="code">HOOD</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（HOOD）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc13','HOOD','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc13','HOOD','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc13','HOOD','D',this)">日足</button>
+  </div>
+  <div id="tvc13" class="chart-wrap" data-sym="HOOD" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=AmO6xAcaH8U" target="_blank" rel="noopener">StockInvestmentEmpire</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Advanced Micro Devices, Inc.</span>
+    <span class="code">AMD</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（AMD）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc14','AMD','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc14','AMD','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc14','AMD','D',this)">日足</button>
+  </div>
+  <div id="tvc14" class="chart-wrap" data-sym="AMD" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=ipcWp4Mqgh0" target="_blank" rel="noopener">Life after 50</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">The Boeing Company</span>
+    <span class="code">BA</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（BA）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc15','BA','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc15','BA','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc15','BA','D',this)">日足</button>
+  </div>
+  <div id="tvc15" class="chart-wrap" data-sym="BA" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=Fk2o2ByweNQ" target="_blank" rel="noopener">Mark Roussin, CPA</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Altimmune, Inc.</span>
+    <span class="code">ALT</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（ALT）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc16','ALT','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc16','ALT','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc16','ALT','D',this)">日足</button>
+  </div>
+  <div id="tvc16" class="chart-wrap" data-sym="ALT" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=Hf1vFILUItE" target="_blank" rel="noopener">주식사관학교</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Virgin Galactic Holdings, Inc.</span>
+    <span class="code">SPCE</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 中</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（SPCE）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc17','SPCE','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc17','SPCE','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc17','SPCE','D',this)">日足</button>
+  </div>
+  <div id="tvc17" class="chart-wrap" data-sym="SPCE" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=0-1i1awbGgw" target="_blank" rel="noopener">Meet Kevin</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>次世代宇宙船開発で技術革新を推進し、商業宇宙旅行市場の拡大と政府・民間契約の獲得が中長期成長の鍵。</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>Deltaクラス宇宙船開発によるコスト削減と性能向上,NASA・ESAなどの政府宇宙開発契約の獲得,民間宇宙旅行需要の増加による収益拡大</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>未採算の事業継続と高リスク開発投資が主流投資家の警戒対象。市場は短期収益重視で評価を抑制。</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>PER未定義・フリーキャッシュフロー赤字だが、PBR 0.71で割安。開発投資が収益化の転換点に。</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>開発遅延によるコスト超過</li><li>競合他社（SpaceXなど）の技術進出</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">技術革新と市場拡大のポテンシャルは高いが、財務健全性と収益化のタイミングが不透明。中長期投資には様子見が適切。</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-head" style="border-left:5px solid #ffb300">
+    <span class="name">Deutsche Bank Aktiengesellschaft</span>
+    <span class="code">DB</span>
+    <span class="badge badge-us">US</span>
+    <span class="verdict" style="background:#ffb300">△様子見</span>
+    <span class="conf">確信度: 低</span>
+  </div>
+  <div class="body">
+    
+<div class="chart-section">
+  <div class="lbl">📈 株価チャート（DB）</div>
+  <div class="chart-tabs">
+    <button class="ctab active" onclick="tvInterval('tvc18','DB','M',this)">月足</button>
+    <button class="ctab" onclick="tvInterval('tvc18','DB','W',this)">週足</button>
+    <button class="ctab" onclick="tvInterval('tvc18','DB','D',this)">日足</button>
+  </div>
+  <div id="tvc18" class="chart-wrap" data-sym="DB" data-interval="M"></div>
+</div>
+    <div class="lbl">📺 参考動画</div>
+    <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=0-1i1awbGgw" target="_blank" rel="noopener">Meet Kevin</a></div>
+    <div class="lbl">🏗 構造的成長根拠</div>
+    <p>分析エラー</p>
+    <div class="lbl">🚀 成長ドライバー</div>
+    <p>分析エラー</p>
+    <div class="lbl">🔍 なぜまだ注目されていないのか</div>
+    <p>分析エラー</p>
+    <div class="lbl">📊 財務概況</div>
+    <p>分析エラー</p>
+    <div class="lbl">⚠️ リスク要因</div>
+    <ul><li>データ取得エラー</li></ul>
+    <div class="lbl">🎯 3〜5年成長シナリオ・テンバガー達成条件</div>
+    <div class="conclusion">分析処理中にエラーが発生しました。</div>
+  </div>
+</div></div>
+</div>
+<script>
+function tvCreate(id, sym, interval) {
+  var el = document.getElementById(id);
+  if (!el || !sym || typeof TradingView === 'undefined') return;
+  el.innerHTML = '';
+  new TradingView.widget({
+    container_id: id,
+    symbol: sym,
+    interval: interval || 'M',
+    theme: 'dark',
+    locale: 'ja',
+    autosize: true,
+    hide_side_toolbar: true,
+    allow_symbol_change: false,
+    save_image: false,
+    withdateranges: true,
+  });
+}
+function tvInterval(id, sym, interval, btn) {
+  tvCreate(id, sym, interval);
+  btn.closest('.chart-tabs').querySelectorAll('.ctab').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+}
+function initPanelCharts(panel) {
+  if (typeof TradingView === 'undefined') return;
+  panel.querySelectorAll('.chart-wrap[data-sym]').forEach(function(el) {
+    if (!el.querySelector('iframe') && el.dataset.sym) {
+      tvCreate(el.id, el.dataset.sym, el.dataset.interval || 'M');
+    }
+  });
+}
+function switchTab(id) {
+  document.querySelectorAll('.main-tab').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  initPanelCharts(document.getElementById('tab-' + id));
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var active = document.querySelector('.tab-panel.active');
+  if (active) initPanelCharts(active);
+});
+</script>
+</body>
+</html>
