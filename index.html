@@ -7,52 +7,107 @@
 <meta name="description" content="YouTube深層分析×ディープリサーチによる投資シグナルレポートの一覧。日本株・米国株・投資テーマを毎週分析。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://yuho66.github.io/stock-research-reports/">
-<meta property="og:type"        content="website">
-<meta property="og:title"       content="投資シグナル レポート一覧">
+<meta property="og:type" content="website">
+<meta property="og:title" content="投資シグナル レポート一覧">
 <meta property="og:description" content="YouTube深層分析×ディープリサーチによる投資シグナルレポート。日本株・米国株・投資テーマを毎週分析。">
-<meta property="og:url"         content="https://yuho66.github.io/stock-research-reports/">
-<meta property="og:site_name"   content="投資シグナル by yuho66">
-<meta property="og:locale"      content="ja_JP">
-<meta name="twitter:card"       content="summary">
-<meta name="twitter:title"      content="投資シグナル レポート一覧">
-<meta name="twitter:description" content="YouTube深層分析×ディープリサーチによる投資シグナルレポート。">
-<meta name="theme-color" content="#0d1b2a">
+<meta property="og:url" content="https://yuho66.github.io/stock-research-reports/">
+<meta property="og:site_name" content="投資シグナル by yuho66">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#030712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
-* { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Hiragino Sans','Yu Gothic','Meiryo',sans-serif; background:#0d1b2a; color:#cdd6f4; }
-.header { background:linear-gradient(135deg,#1e3a5f,#0d1b2a); padding:32px 20px; text-align:center; border-bottom:2px solid #2a4a7f; }
-.header h1 { font-size:24px; color:#89b4fa; letter-spacing:2px; }
-.header .sub { color:#6c7086; margin-top:6px; font-size:13px; }
-.container { max-width:960px; margin:0 auto; padding:24px 20px; }
-table { width:100%; border-collapse:collapse; }
-th { background:#162535; padding:12px 14px; text-align:left; font-size:12px; color:#89b4fa; text-transform:uppercase; letter-spacing:1px; }
-td { padding:12px 14px; border-bottom:1px solid #1e2d40; font-size:14px; vertical-align:top; }
-tr:hover td { background:#1e2d40; }
-.date a { color:#89dceb; text-decoration:none; font-weight:bold; }
-.date a:hover { text-decoration:underline; }
-.cnt { text-align:center; color:#a6e3a1; font-weight:bold; font-size:16px; }
-.picks { display:flex; flex-wrap:wrap; gap:5px; }
-.pick { background:#1a3d5c; color:#74c7ec; padding:2px 8px; border-radius:10px; font-size:12px; }
-.empty { text-align:center; color:#45475a; padding:40px; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic','Meiryo',sans-serif;background:#030712;color:#e2e8f0;min-height:100vh}
+.header{
+  background:
+    radial-gradient(ellipse at 15% 60%,rgba(99,102,241,.14) 0%,transparent 55%),
+    radial-gradient(ellipse at 85% 20%,rgba(34,211,238,.09) 0%,transparent 50%),
+    #030712;
+  padding:48px 20px 36px;text-align:center;border-bottom:1px solid #1c2a40;position:relative;overflow:hidden;
+}
+.header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23818cf8' fill-opacity='.06'/%3E%3C/svg%3E");pointer-events:none}
+.header h1{font-size:26px;font-weight:800;letter-spacing:.5px;background:linear-gradient(135deg,#818cf8 0%,#22d3ee 50%,#34d399 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative}
+.header .sub{color:#475569;margin-top:10px;font-size:13px;position:relative}
+.header .tag-line{margin-top:8px;font-size:12px;color:#334155;position:relative;letter-spacing:.3px}
+.container{max-width:1000px;margin:0 auto;padding:36px 20px 60px}
+/* Calendar */
+.cal-section{margin-bottom:36px}
+.cal-section-title{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.cal-section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#1c2a40,transparent)}
+.cal-wrap{background:#0c1220;border:1px solid #1c2a40;border-radius:16px;padding:24px;position:relative;overflow:hidden}
+.cal-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6366f1,#22d3ee,#34d399)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.cal-month-label{font-size:16px;font-weight:800;background:linear-gradient(135deg,#818cf8,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;min-width:120px;text-align:center}
+.cal-nav{background:rgba(129,140,248,.1);border:1px solid rgba(129,140,248,.2);color:#818cf8;width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0}
+.cal-nav:hover{background:rgba(129,140,248,.22);border-color:#818cf8;transform:scale(1.05)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-day-hdr{text-align:center;font-size:10px;color:#334155;font-weight:700;text-transform:uppercase;padding:4px 0;letter-spacing:.8px}
+.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:13px;color:#334155;transition:all .15s}
+.cal-day.today{color:#e2e8f0;background:rgba(129,140,248,.1);font-weight:700;border:1px solid rgba(129,140,248,.2)}
+.cal-day.has-report a{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#22d3ee;font-weight:700;text-decoration:none;border-radius:8px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.2);transition:all .18s;position:relative}
+.cal-day.has-report a::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:#22d3ee}
+.cal-day.has-report a:hover{background:rgba(34,211,238,.2);border-color:#22d3ee;transform:scale(1.08);box-shadow:0 4px 16px rgba(34,211,238,.2)}
+.cal-day.has-report.today a{background:rgba(129,140,248,.15);color:#818cf8;border-color:rgba(129,140,248,.35)}
+/* Table section */
+.list-section-title{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.list-section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#1c2a40,transparent)}
+.table-wrap{background:#0c1220;border:1px solid #1c2a40;border-radius:16px;overflow:hidden;position:relative}
+.table-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6366f1,#22d3ee,#34d399)}
+table{width:100%;border-collapse:collapse}
+th{background:rgba(12,18,32,.8);padding:14px 16px;text-align:left;font-size:10px;color:#475569;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #1c2a40}
+td{padding:14px 16px;border-bottom:1px solid rgba(28,42,64,.4);font-size:14px;vertical-align:middle;transition:background .15s}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(20,28,44,.5)}
+.date a{color:#22d3ee;text-decoration:none;font-weight:700;letter-spacing:.3px}
+.date a:hover{color:#67e8f9}
+.cnt{text-align:center;font-weight:800;font-size:16px;background:linear-gradient(135deg,#34d399,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.picks{display:flex;flex-wrap:wrap;gap:5px}
+.pick{background:rgba(99,102,241,.1);color:#818cf8;padding:2px 9px;border-radius:10px;font-size:12px;border:1px solid rgba(99,102,241,.2)}
+.no-pick{color:#334155;font-size:12px}
+.empty-msg{text-align:center;color:#334155;padding:48px;font-size:14px}
+@media(max-width:600px){
+  .header h1{font-size:20px}
+  .cal-grid{gap:4px}
+  .cal-day{font-size:12px}
+  table{font-size:13px}
+  th,td{padding:10px 10px}
+}
 </style>
 </head>
 <body>
 <div class="header">
-  <h1>📊 投資シグナル レポート一覧</h1>
-  <div class="sub">全 3 件のレポート ｜ 最終更新: 2026-05-05</div>
+  <h1>📊 投資シグナル</h1>
+  <div class="sub">YouTube深層分析 × ディープリサーチ統合レポート</div>
+  <div class="tag-line">全 3 件 ｜ 最終更新: 2026-05-05</div>
 </div>
 <div class="container">
-<table>
-  <thead>
-    <tr>
-      <th>日付</th>
-      <th style="text-align:center">テーマ</th>
-      <th style="text-align:center">日本株</th>
-      <th style="text-align:center">米国株</th>
-      <th>◎ 強推奨ピック</th>
-    </tr>
-  </thead>
+  <div class="cal-section">
+    <div class="cal-section-title">📅 カレンダー</div>
+    <div class="cal-wrap">
+      <div class="cal-head">
+        <button class="cal-nav" onclick="calPrev()">‹</button>
+        <div class="cal-month-label" id="cal-title"></div>
+        <button class="cal-nav" onclick="calNext()">›</button>
+      </div>
+      <div class="cal-grid">
+        <div class="cal-day-hdr">日</div><div class="cal-day-hdr">月</div>
+        <div class="cal-day-hdr">火</div><div class="cal-day-hdr">水</div>
+        <div class="cal-day-hdr">木</div><div class="cal-day-hdr">金</div>
+        <div class="cal-day-hdr">土</div>
+        <div id="cal-cells" style="display:contents"></div>
+      </div>
+    </div>
+  </div>
+  <div class="list-section-title">📋 レポート一覧</div>
+  <div class="table-wrap"><table>
+  <thead><tr>
+    <th>日付</th>
+    <th style="text-align:center">テーマ</th>
+    <th style="text-align:center">日本株</th>
+    <th style="text-align:center">米国株</th>
+    <th>◎ 強推奨ピック</th>
+  </tr></thead>
   <tbody><tr>
   <td class="date"><a href="report_2026-05-04.html">2026-05-04</a></td>
   <td class="cnt">8</td>
@@ -64,15 +119,37 @@ tr:hover td { background:#1e2d40; }
   <td class="cnt">0</td>
   <td class="cnt">1</td>
   <td class="cnt">0</td>
-  <td class="picks"><span style="color:#45475a">強推奨なし</span></td>
+  <td class="picks"><span class="no-pick">強推奨なし</span></td>
 </tr><tr>
   <td class="date"><a href="report_2026-05-03.html">2026-05-03</a></td>
   <td class="cnt">0</td>
   <td class="cnt">0</td>
   <td class="cnt">0</td>
-  <td class="picks"><span style="color:#45475a">強推奨なし</span></td>
+  <td class="picks"><span class="no-pick">強推奨なし</span></td>
 </tr></tbody>
-</table>
+</table></div>
 </div>
+<script>
+var RD={"2026-05-04":"report_2026-05-04.html","2026-05-04-test":"report_2026-05-04-test.html","2026-05-03":"report_2026-05-03.html"};
+var CY=new Date().getFullYear(),CM=new Date().getMonth()+1;
+var TODAY='2026-05-05';
+function buildCal(y,m){
+  document.getElementById('cal-title').textContent=y+'年'+m+'月';
+  var first=new Date(y,m-1,1).getDay();
+  var days=new Date(y,m,0).getDate();
+  var html='';
+  for(var i=0;i<first;i++) html+='<div class="cal-day"></div>';
+  for(var d=1;d<=days;d++){
+    var ds=y+'-'+String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+    var isToday=ds===TODAY;
+    var cls='cal-day'+(isToday?' today':'')+(RD[ds]?' has-report':'');
+    html+='<div class="'+cls+'">'+(RD[ds]?'<a href="'+RD[ds]+'">'+d+'</a>':d)+'</div>';
+  }
+  document.getElementById('cal-cells').innerHTML=html;
+}
+function calPrev(){if(CM===1){CY--;CM=12;}else CM--;buildCal(CY,CM);}
+function calNext(){if(CM===12){CY++;CM=1;}else CM++;buildCal(CY,CM);}
+buildCal(CY,CM);
+</script>
 </body>
 </html>
