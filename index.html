@@ -16,6 +16,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#030712">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="投資シグナル RSS" href="https://yuho66.github.io/stock-research-reports/feed.xml">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,'Hiragino Sans','Yu Gothic','Meiryo',sans-serif;background:#030712;color:#e2e8f0;min-height:100vh}
@@ -66,6 +67,33 @@ tr:hover td{background:rgba(20,28,44,.5)}
 .pick{background:rgba(99,102,241,.1);color:#818cf8;padding:2px 9px;border-radius:10px;font-size:12px;border:1px solid rgba(99,102,241,.2)}
 .no-pick{color:#334155;font-size:12px}
 .empty-msg{text-align:center;color:#334155;padding:48px;font-size:14px}
+/* Search */
+.search-section{margin-bottom:28px}
+.search-wrap{position:relative;display:flex;align-items:center}
+.search-icon{position:absolute;left:14px;font-size:15px;color:#475569;pointer-events:none}
+#search-input{width:100%;background:#0c1220;border:1px solid #1c2a40;border-radius:12px;padding:12px 14px 12px 42px;font-size:14px;color:#e2e8f0;outline:none;transition:border-color .15s;font-family:inherit}
+#search-input:focus{border-color:rgba(129,140,248,.4)}
+#search-input::placeholder{color:#334155}
+.search-clear{position:absolute;right:12px;background:none;border:none;color:#475569;cursor:pointer;font-size:16px;line-height:1}
+.search-results{margin-top:10px}
+.sr-item{background:#0c1220;border:1px solid #1c2a40;border-radius:12px;padding:14px 16px;margin-bottom:8px;transition:border-color .15s}
+.sr-item:hover{border-color:#2d3f5c}
+.sr-name{font-size:14px;font-weight:700;color:#f1f5f9;margin-bottom:6px}
+.sr-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.sr-type{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700}
+.sr-type.JP{background:rgba(34,211,238,.08);color:#22d3ee;border:1px solid rgba(34,211,238,.18)}
+.sr-type.US{background:rgba(251,113,133,.08);color:#fb7185;border:1px solid rgba(251,113,133,.18)}
+.sr-type.テーマ{background:rgba(52,211,153,.08);color:#34d399;border:1px solid rgba(52,211,153,.18)}
+.sr-sector{font-size:11px;color:#475569}
+.sr-apps{display:flex;flex-wrap:wrap;gap:5px}
+.sr-app{font-size:11px;padding:2px 9px;border-radius:10px;background:rgba(99,102,241,.1);color:#818cf8;border:1px solid rgba(99,102,241,.2);text-decoration:none}
+.sr-app:hover{background:rgba(99,102,241,.2)}
+/* Watchlist */
+.watch-section{margin-bottom:28px}
+.watch-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.watch-chip{font-size:12px;padding:5px 13px;border-radius:20px;background:rgba(251,191,36,.08);color:#fbbf24;border:1px solid rgba(251,191,36,.2);text-decoration:none;transition:all .15s}
+.watch-chip:hover{background:rgba(251,191,36,.18)}
+.no-watch{color:#334155;font-size:13px}
 @media(max-width:600px){
   .header h1{font-size:20px}
   .cal-grid{gap:4px}
@@ -80,8 +108,25 @@ tr:hover td{background:rgba(20,28,44,.5)}
   <h1>📊 投資シグナル</h1>
   <div class="sub">YouTube深層分析 × ディープリサーチ統合レポート</div>
   <div class="tag-line">全 3 件 ｜ 最終更新: 2026-05-06</div>
+  <div style="margin-top:14px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+    <a href="history.html" style="color:#818cf8;text-decoration:none;font-size:12px;padding:5px 14px;border:1px solid rgba(129,140,248,.2);border-radius:20px;transition:all .15s" onmouseover="this.style.background='rgba(129,140,248,.12)'" onmouseout="this.style.background='transparent'">📊 銘柄履歴</a>
+    <a href="feed.xml" style="color:#f97316;text-decoration:none;font-size:12px;padding:5px 14px;border:1px solid rgba(249,115,22,.2);border-radius:20px;transition:all .15s" onmouseover="this.style.background='rgba(249,115,22,.12)'" onmouseout="this.style.background='transparent'">📡 RSS</a>
+  </div>
 </div>
 <div class="container">
+  <div class="search-section">
+    <div class="cal-section-title">🔍 銘柄・テーマ検索</div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="銘柄名・ティッカー・テーマを検索..." oninput="doSearch(this.value)">
+      <button class="search-clear" onclick="clearSearch()" title="クリア">×</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+  <div class="watch-section">
+    <div class="cal-section-title">⭐ ウォッチリスト</div>
+    <div class="watch-chips" id="watch-chips"><span class="no-watch">まだ登録がありません（レポートの☆ボタンで追加）</span></div>
+  </div>
   <div class="cal-section">
     <div class="cal-section-title">📅 カレンダー</div>
     <div class="cal-wrap">
@@ -133,6 +178,51 @@ tr:hover td{background:rgba(20,28,44,.5)}
 var RD={"2026-05-04":"report_2026-05-04.html","2026-05-04-test":"report_2026-05-04-test.html","2026-05-03":"report_2026-05-03.html"};
 var CY=new Date().getFullYear(),CM=new Date().getMonth()+1;
 var TODAY='2026-05-06';
+// 検索インデックス
+var SI=null;
+function escH(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function loadSI(cb){
+  if(SI){cb();return;}
+  fetch('search-index.json').then(function(r){return r.json();}).then(function(d){SI=d;cb();}).catch(function(){SI=[];cb();});
+}
+function doSearch(q){
+  q=q.trim();
+  var el=document.getElementById('search-results');
+  if(!q){el.innerHTML='';return;}
+  loadSI(function(){
+    var r=(SI||[]).filter(function(i){
+      return i.name.toLowerCase().includes(q.toLowerCase())||(i.code||'').toLowerCase().includes(q.toLowerCase());
+    }).slice(0,20);
+    var html=r.map(function(i){
+      return '<div class="sr-item">'
+        +'<div class="sr-name"><a href="'+i.report+'" style="color:#f1f5f9;text-decoration:none">'+escH(i.name)+'</a></div>'
+        +'<div class="sr-meta"><span class="sr-type '+i.type+'">'+escH(i.type)+'</span>'
+          +(i.sector?'<span class="sr-sector">'+escH(i.sector)+'</span>':'')+'</div>'
+        +'<div class="sr-apps">'+i.dates.slice(0,5).map(function(d){
+            return '<a class="sr-app" href="report_'+d+'.html">'+d+'</a>';
+          }).join('')+'</div>'
+        +'</div>';
+    }).join('');
+    el.innerHTML=html||'<p style="color:#334155;font-size:13px;margin-top:8px">一致する銘柄・テーマが見つかりません</p>';
+  });
+}
+function clearSearch(){document.getElementById('search-input').value='';document.getElementById('search-results').innerHTML='';}
+// ウォッチリスト表示
+function renderWatchlist(){
+  var list;try{list=JSON.parse(localStorage.getItem('watchlist')||'[]');}catch(_){list=[];}
+  var el=document.getElementById('watch-chips');
+  if(!el)return;
+  if(!list.length){el.innerHTML='<span class="no-watch">まだ登録がありません（レポートの☆ボタンで追加）</span>';return;}
+  loadSI(function(){
+    var html=list.map(function(name){
+      var found=(SI||[]).find(function(i){return i.name===name;});
+      var href=found?found.report:'#';
+      return '<a class="watch-chip" href="'+href+'">⭐ '+escH(name)+'</a>';
+    }).join('');
+    el.innerHTML=html||'<span class="no-watch">まだ登録がありません</span>';
+  });
+}
+renderWatchlist();
 function buildCal(y,m){
   document.getElementById('cal-title').textContent=y+'年'+m+'月';
   var first=new Date(y,m-1,1).getDay();
