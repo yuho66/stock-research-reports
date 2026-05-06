@@ -1,0 +1,665 @@
+{
+  "date": "2026-05-06",
+  "generatedAt": "2026-05-06T14:58:54.119Z",
+  "summary": {
+    "themes": 2,
+    "jpStocks": 0,
+    "usStocks": 10,
+    "topPicks": []
+  },
+  "themes": [
+    {
+      "name": "防衛・軍事関連産業",
+      "market": "両方",
+      "youtuber_claim": "台湾周辺の地政学的緊張とグレーゾーン作戦の常態化を受け、各国で防衛費増大や防衛関連技術への投資が中長期的に加速。",
+      "structural_driver": "地政学的リスクの高まりと軍事力強化の国際的トレンド",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "Lockheed Martin",
+        "三菱重工業",
+        "川崎重工業"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "SGKyRxbYkRg",
+          "title": "【台湾有事は危険水域？】台湾包囲激化／報道する内容と報道しない内容／台湾にとっての新常態とは？／軍事行動とは言わない経済封鎖《小原凡司×野沢春日》",
+          "channel": "楽待 RAKUMACHI",
+          "description": "不動産投資なら、収益物件数NO.1「楽待アプリ」▽ https://www.rakumachi.jp/r/yhttr4ve?uiaid=youtube ▽おすすめの関連動画は ...",
+          "publishedAt": "2026-05-04T10:00:44Z",
+          "url": "https://www.youtube.com/watch?v=SGKyRxbYkRg"
+        }
+      ],
+      "claims": [
+        "台湾周辺の地政学的緊張とグレーゾーン作戦の常態化を受け、各国で防衛費増大や防衛関連技術への投資が中長期的に加速。"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "market_size": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "investment_approach": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    },
+    {
+      "name": "サイバーセキュリティ・情報防衛",
+      "market": "両方",
+      "youtuber_claim": "国家間のサイバー攻撃や情報戦が激化し、特に地政学的ホットスポットを中心に政府・企業レベルでのセキュリティ対策と技術投資が急務に。",
+      "structural_driver": "国家主導のサイバー攻撃・情報戦の常態化と高度化",
+      "recognition_stage": "認知拡大中",
+      "representative_stocks": [
+        "Palo Alto Networks",
+        "トレンドマイクロ",
+        "CyberArk Software"
+      ],
+      "sourceVideos": [
+        {
+          "videoId": "SGKyRxbYkRg",
+          "title": "【台湾有事は危険水域？】台湾包囲激化／報道する内容と報道しない内容／台湾にとっての新常態とは？／軍事行動とは言わない経済封鎖《小原凡司×野沢春日》",
+          "channel": "楽待 RAKUMACHI",
+          "description": "不動産投資なら、収益物件数NO.1「楽待アプリ」▽ https://www.rakumachi.jp/r/yhttr4ve?uiaid=youtube ▽おすすめの関連動画は ...",
+          "publishedAt": "2026-05-04T10:00:44Z",
+          "url": "https://www.youtube.com/watch?v=SGKyRxbYkRg"
+        }
+      ],
+      "claims": [
+        "国家間のサイバー攻撃や情報戦が激化し、特に地政学的ホットスポットを中心に政府・企業レベルでのセキュリティ対策と技術投資が急務に。"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "megatrend_fit": "分析エラー",
+        "market_size": "分析エラー",
+        "early_signals": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "jp_stocks": [],
+        "us_stocks": [],
+        "investment_approach": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。"
+      }
+    }
+  ],
+  "jpStocks": [],
+  "usStocks": [
+    {
+      "name": "AMD",
+      "code": "AMD",
+      "market": "US",
+      "youtuber_claim": "半導体・ハードウェアセクターは今後もブームが続き、AMDはそれに乗じて大きく成長する可能性が高い。直近の決算も好調。",
+      "growth_driver": "半導体・AI・データセンター",
+      "recognition_stage": "主流化前夜",
+      "sourceVideos": [
+        {
+          "videoId": "RGPd3LfztyQ",
+          "title": "Alpha Report 5-6-2026",
+          "channel": "Meet Kevin",
+          "description": "Couponcode GoodByePowell expires May 8 at 11:59pm. Alpha Membership: https://MeetKevin.com ReinvestAI: ...",
+          "publishedAt": "2026-05-06T13:34:29Z",
+          "url": "https://www.youtube.com/watch?v=RGPd3LfztyQ"
+        }
+      ],
+      "claims": [
+        "半導体・ハードウェアセクターは今後もブームが続き、AMDはそれに乗じて大きく成長する可能性が高い。直近の決算も好調。"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "AMD",
+        "_verifiedCode": "AMD",
+        "_financial": {
+          "price": 410.5,
+          "change1d": "15.55",
+          "marketCap": 669283647488,
+          "pe": "158.5",
+          "forwardPE": "33.4",
+          "pbr": "10.62",
+          "eps": "2.59",
+          "dividendYield": null,
+          "high52w": 430.57,
+          "low52w": 96.88,
+          "currency": "USD",
+          "shortName": "Advanced Micro Devices, Inc.",
+          "week52Position": "94"
+        }
+      }
+    },
+    {
+      "name": "ARM",
+      "code": "ARM",
+      "market": "US",
+      "youtuber_claim": "CPUを含むハードウェアセクターの継続的な成長が期待されており、ARMはその中心的な存在として今後も非常に好調に推移するだろう。",
+      "growth_driver": "半導体・CPU・AI",
+      "recognition_stage": "主流化前夜",
+      "sourceVideos": [
+        {
+          "videoId": "RGPd3LfztyQ",
+          "title": "Alpha Report 5-6-2026",
+          "channel": "Meet Kevin",
+          "description": "Couponcode GoodByePowell expires May 8 at 11:59pm. Alpha Membership: https://MeetKevin.com ReinvestAI: ...",
+          "publishedAt": "2026-05-06T13:34:29Z",
+          "url": "https://www.youtube.com/watch?v=RGPd3LfztyQ"
+        }
+      ],
+      "claims": [
+        "CPUを含むハードウェアセクターの継続的な成長が期待されており、ARMはその中心的な存在として今後も非常に好調に推移するだろう。"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "ARM",
+        "_verifiedCode": "ARM",
+        "_financial": {
+          "price": 229.54,
+          "change1d": "9.91",
+          "marketCap": 243771146240,
+          "pe": "306.1",
+          "forwardPE": "107.3",
+          "pbr": "31.26",
+          "eps": "0.75",
+          "dividendYield": null,
+          "high52w": 237.68,
+          "low52w": 100.02,
+          "currency": "USD",
+          "shortName": "Arm Holdings plc",
+          "week52Position": "94"
+        }
+      }
+    },
+    {
+      "name": "Nvidia",
+      "code": "NVDA",
+      "market": "US",
+      "youtuber_claim": "AIブームが継続し、Google Cloudの成長やTPU需要、大規模なCapex増加が半導体業界を牽引。現在調整中だが、適正価格は$300と見ており、長期的な成長機会がある。",
+      "growth_driver": "AI・データセンターインフラ投資",
+      "recognition_stage": "主流",
+      "sourceVideos": [
+        {
+          "videoId": "Gbd0uSSrI5k",
+          "title": "Iran is Worsening.",
+          "channel": "Meet Kevin",
+          "description": "Couponcode GoodByePowell expires May 8 at 11:59pm. Alpha Membership: https://MeetKevin.com ReinvestAI: ...",
+          "publishedAt": "2026-05-04T18:44:09Z",
+          "url": "https://www.youtube.com/watch?v=Gbd0uSSrI5k"
+        },
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "AIブームが継続し、Google Cloudの成長やTPU需要、大規模なCapex増加が半導体業界を牽引。現在調整中だが、適正価格は$300と見ており、長期的な成長機会がある。",
+        "AI向けGPU市場をほぼ独占し、データセンター需要拡大の恩恵で今後5年間も安定した成長が期待される"
+      ],
+      "mentionCount": 2,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Nvidia",
+        "_verifiedCode": "NVDA",
+        "_financial": {
+          "price": 204.9,
+          "change1d": "4.28",
+          "marketCap": 4980094271488,
+          "pe": "41.9",
+          "forwardPE": "18.2",
+          "pbr": "31.66",
+          "eps": "4.89",
+          "dividendYield": "0.02",
+          "high52w": 216.83,
+          "low52w": 112.28,
+          "currency": "USD",
+          "shortName": "NVIDIA Corporation",
+          "week52Position": "89"
+        }
+      }
+    },
+    {
+      "name": "Palantir",
+      "code": "PLTR",
+      "market": "US",
+      "youtuber_claim": "AIオペレーティングシステムで大手企業のAI活用を支援、1300%成長後もまだ大きな伸びしろがある",
+      "growth_driver": "AIオペレーティングシステム",
+      "recognition_stage": "主流化前夜",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "AIオペレーティングシステムで大手企業のAI活用を支援、1300%成長後もまだ大きな伸びしろがある"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Palantir",
+        "_verifiedCode": "PLTR",
+        "_financial": {
+          "price": 134.3099,
+          "change1d": "-1.18",
+          "marketCap": 321982758912,
+          "pe": "152.6",
+          "forwardPE": "66.8",
+          "pbr": "43.48",
+          "eps": "0.88",
+          "dividendYield": null,
+          "high52w": 207.52,
+          "low52w": 107,
+          "currency": "USD",
+          "shortName": "Palantir Technologies Inc.",
+          "week52Position": "27"
+        }
+      }
+    },
+    {
+      "name": "Arista Networks",
+      "code": "ANET",
+      "market": "US",
+      "youtuber_claim": "データセンター向けネットワーク機器で急成長、高利益率・無借金で堅調な事業拡大を見せる",
+      "growth_driver": "データセンターネットワーク",
+      "recognition_stage": "認知拡大中",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "データセンター向けネットワーク機器で急成長、高利益率・無借金で堅調な事業拡大を見せる"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Arista Networks",
+        "_verifiedCode": "ANET",
+        "_financial": {
+          "price": 146.119,
+          "change1d": "-14.16",
+          "marketCap": 183988584448,
+          "pe": "50.2",
+          "forwardPE": "33.4",
+          "pbr": "14.84",
+          "eps": "2.91",
+          "dividendYield": null,
+          "high52w": 179.8,
+          "low52w": 82.8,
+          "currency": "USD",
+          "shortName": "Arista Networks, Inc.",
+          "week52Position": "65"
+        }
+      }
+    },
+    {
+      "name": "Micron Technology",
+      "code": "MU",
+      "market": "US",
+      "youtuber_claim": "AI向け高帯域メモリ(HBM)市場で今後5年間支配的地位を確立し、データセンター需要の恩恵を受ける",
+      "growth_driver": "AI向け高帯域メモリ(HBM)",
+      "recognition_stage": "主流化前夜",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "AI向け高帯域メモリ(HBM)市場で今後5年間支配的地位を確立し、データセンター需要の恩恵を受ける"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Micron Technology",
+        "_verifiedCode": "MU",
+        "_financial": {
+          "price": 654.06,
+          "change1d": "2.13",
+          "marketCap": 737605713920,
+          "pe": "30.9",
+          "forwardPE": "6.4",
+          "pbr": "10.18",
+          "eps": "21.19",
+          "dividendYield": "0.08",
+          "high52w": 662.88,
+          "low52w": 80.2,
+          "currency": "USD",
+          "shortName": "Micron Technology, Inc.",
+          "week52Position": "98"
+        }
+      }
+    },
+    {
+      "name": "Vertiv Holdings",
+      "code": "VRT",
+      "market": "US",
+      "youtuber_claim": "データセンター向け液冷システムを提供し、AIインフラの重要な冷却ボトルネックを解決する",
+      "growth_driver": "データセンター冷却システム",
+      "recognition_stage": "認知拡大中",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "データセンター向け液冷システムを提供し、AIインフラの重要な冷却ボトルネックを解決する"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Vertiv Holdings",
+        "_verifiedCode": "VRT",
+        "_financial": {
+          "price": 353.97,
+          "change1d": "3.80",
+          "marketCap": 135962992640,
+          "pe": "88.7",
+          "forwardPE": "41.1",
+          "pbr": "34.36",
+          "eps": "3.99",
+          "dividendYield": "0.04",
+          "high52w": 354.38,
+          "low52w": 91.84,
+          "currency": "USD",
+          "shortName": "Vertiv Holdings, LLC",
+          "week52Position": "100"
+        }
+      }
+    },
+    {
+      "name": "Bloom Energy",
+      "code": "BE",
+      "market": "US",
+      "youtuber_claim": "データセンター向けオンサイト燃料電池を提供し、AIインフラに必要な電力供給のボトルネックを解消する",
+      "growth_driver": "オンサイト燃料電池",
+      "recognition_stage": "認知拡大中",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "データセンター向けオンサイト燃料電池を提供し、AIインフラに必要な電力供給のボトルネックを解消する"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Bloom Energy",
+        "_verifiedCode": "BE",
+        "_financial": {
+          "price": 284.93,
+          "change1d": "-3.50",
+          "marketCap": 81046593536,
+          "forwardPE": "69.0",
+          "pbr": "87.89",
+          "eps": "-0.03",
+          "dividendYield": null,
+          "high52w": 302.99,
+          "low52w": 16.18,
+          "currency": "USD",
+          "shortName": "Bloom Energy Corporation",
+          "week52Position": "94"
+        }
+      }
+    },
+    {
+      "name": "Constellation Energy",
+      "code": "CEG",
+      "market": "US",
+      "youtuber_claim": "24時間稼働可能な原子力エネルギーを提供し、データセンターの安定した電力供給問題を解決する",
+      "growth_driver": "原子力発電",
+      "recognition_stage": "認知拡大中",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "24時間稼働可能な原子力エネルギーを提供し、データセンターの安定した電力供給問題を解決する"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "Constellation Energy",
+        "_verifiedCode": "CEG",
+        "_financial": {
+          "price": 315.18,
+          "change1d": "-1.64",
+          "marketCap": 114188025856,
+          "pe": "42.6",
+          "forwardPE": "23.2",
+          "pbr": "6.78",
+          "eps": "7.40",
+          "dividendYield": "0.48",
+          "high52w": 412.7,
+          "low52w": 243.3,
+          "currency": "USD",
+          "shortName": "Constellation Energy Corporatio",
+          "week52Position": "42"
+        }
+      }
+    },
+    {
+      "name": "ASML Holding",
+      "code": "ASML",
+      "market": "US",
+      "youtuber_claim": "半導体製造装置市場の独占企業であり、AI半導体需要の拡大により今後5年間も収益を上げ続ける",
+      "growth_driver": "半導体製造装置",
+      "recognition_stage": "主流",
+      "sourceVideos": [
+        {
+          "videoId": "kYMsO1UahAI",
+          "title": "I Got Rich Off PALANTIR. This Is Even Bigger.",
+          "channel": "Tom Nash",
+          "description": "My 15 Top Picks For The Next Decade (Free Report): https://join.tomnash.academy/top-15-investment-opportunities ...",
+          "publishedAt": "2026-05-01T19:44:58Z",
+          "url": "https://www.youtube.com/watch?v=kYMsO1UahAI"
+        }
+      ],
+      "claims": [
+        "半導体製造装置市場の独占企業であり、AI半導体需要の拡大により今後5年間も収益を上げ続ける"
+      ],
+      "mentionCount": 1,
+      "verdictData": {
+        "verdict": "△様子見",
+        "confidence": "低",
+        "cap_category": "不明",
+        "structural_thesis": "分析エラー",
+        "growth_drivers": [
+          "分析エラー"
+        ],
+        "tenbagger_potential": "分析エラー",
+        "why_not_mainstream_yet": "分析エラー",
+        "financial_assessment": "分析エラー",
+        "entry_strategy": "分析エラー",
+        "risks": [
+          "データ取得エラー"
+        ],
+        "conclusion": "分析処理中にエラーが発生しました。",
+        "_verifiedName": "ASML Holding",
+        "_verifiedCode": "ASML",
+        "_financial": {
+          "price": 1524.45,
+          "change1d": "5.65",
+          "marketCap": 587549966336,
+          "pe": "50.3",
+          "forwardPE": "32.0",
+          "pbr": "1336.37",
+          "eps": "30.30",
+          "dividendYield": "0.41",
+          "high52w": 1547.22,
+          "low52w": 683.46,
+          "currency": "USD",
+          "shortName": "ASML Holding N.V. - New York Re",
+          "week52Position": "97"
+        }
+      }
+    }
+  ]
+}
