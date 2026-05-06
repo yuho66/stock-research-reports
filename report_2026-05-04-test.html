@@ -87,6 +87,7 @@ li{margin-bottom:5px}
 .fin-label{font-size:9px;color:#334155;text-transform:uppercase;letter-spacing:1px}
 .fin-value{font-size:14px;color:#e2e8f0;font-weight:700}
 .cap-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:rgba(192,132,252,.08);color:#c084fc;border:1px solid rgba(192,132,252,.18)}
+.sector-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:rgba(251,191,36,.08);color:#fbbf24;border:1px solid rgba(251,191,36,.18)}
 /* Section heads */
 .section-head{font-size:13px;font-weight:700;margin:28px 0 14px;padding:10px 16px;border-radius:10px;display:flex;align-items:center;gap:8px;letter-spacing:.3px}
 .section-head.large{background:rgba(99,102,241,.08);color:#818cf8;border:1px solid rgba(99,102,241,.15)}
@@ -116,6 +117,16 @@ li{margin-bottom:5px}
 .history-chip{font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(129,140,248,.08);color:#818cf8;border:1px solid rgba(129,140,248,.15)}
 .history-chip.streak{background:rgba(52,211,153,.08);color:#34d399;border-color:rgba(52,211,153,.2)}
 /* Mobile */
+/* Filter bar */
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #1c2a40}
+.filter-btn{padding:5px 14px;border-radius:20px;border:1px solid #1c2a40;background:transparent;color:#475569;cursor:pointer;font-size:12px;font-weight:600;transition:all .15s;white-space:nowrap}
+.filter-btn.active{background:rgba(129,140,248,.12);color:#818cf8;border-color:rgba(129,140,248,.3)}
+.filter-btn:hover:not(.active){border-color:#2d3f5c;color:#94a3b8}
+.card.hidden{display:none!important}
+/* Watchlist */
+.watch-btn{background:none;border:none;cursor:pointer;font-size:17px;color:#334155;padding:0 3px;transition:color .15s;line-height:1;flex-shrink:0}
+.watch-btn.watching{color:#fbbf24}
+.watch-btn:hover{color:#fbbf24}
 @media(max-width:600px){
   .header h1{font-size:22px}
   .name{font-size:16px}
@@ -148,7 +159,12 @@ li{margin-bottom:5px}
 </div>
 <div class="container">
   <div id="tab-themes" class="tab-panel active"><p class="no-data">本日の候補なし</p></div>
-  <div id="tab-jp"     class="tab-panel"><h2 class="section-head large">🏢 大型株（日本株）</h2>
+  <div id="tab-jp"     class="tab-panel"><div class="filter-bar">
+  <button class="filter-btn active" onclick="applyFilter(this,'全て')">全て</button>
+  <button class="filter-btn" onclick="applyFilter(this,'◎')">◎ 強推奨</button>
+  <button class="filter-btn" onclick="applyFilter(this,'○+')">○ 以上</button>
+  <button class="filter-btn" onclick="applyFilter(this,'△-')">△ 以下</button>
+</div><h2 class="section-head large">🏢 大型株（日本株）</h2>
 <div class="card">
   <div class="card-top-bar" style="background:linear-gradient(90deg,#22d3ee,#22d3ee55,transparent)"></div>
   <div class="card-head">
@@ -157,7 +173,9 @@ li{margin-bottom:5px}
     <span class="badge badge-jp">JP</span>
     <span class="cap-badge">大型株（時価総額1兆円超/米10B$超）</span>
     
+    
     <span class="verdict" style="background:#22d3ee1a;color:#22d3ee;border:1px solid #22d3ee44">○推奨</span>
+    <button class="watch-btn" data-name="%E4%B8%89%E8%8F%B1%E3%83%9E%E3%83%86%E3%83%AA%E3%82%A2%E3%83%AB" onclick="toggleWatch(this)" title="ウォッチリスト">☆</button>
     <span class="conf">確信度: 中</span>
   </div>
   <div class="body">
@@ -180,6 +198,10 @@ li{margin-bottom:5px}
   <div class="fin-item"><span class="fin-label">配当利回り</span><span class="fin-value">1.96%</span></div>
   <div class="fin-item"><span class="fin-label">EPS</span><span class="fin-value">113.79</span></div>
   <div class="fin-item"><span class="fin-label">52週高値/安値</span><span class="fin-value">6126 / 2163</span></div>
+  
+  
+  
+  
 </div>
     <div class="lbl">📺 参考動画</div>
     <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=uiDVbWHsAGU" target="_blank" rel="noopener">【話題株】深掘りラボ</a></div>
@@ -247,6 +269,32 @@ function switchTab(id) {
     initPanelCharts(document.getElementById('tab-' + id));
   }, 50);
 }
+// verdict フィルター
+function applyFilter(btn, f) {
+  var panel = btn.closest('.tab-panel');
+  panel.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  panel.querySelectorAll('.card').forEach(function(card) {
+    var v = (card.querySelector('.verdict') || {}).textContent || '';
+    var show = f==='全て' ? true : f==='◎' ? v.startsWith('◎') : f==='○+' ? (v.startsWith('◎')||v.startsWith('○')) : (v.startsWith('△')||v.startsWith('✕'));
+    card.classList.toggle('hidden', !show);
+  });
+}
+// ウォッチリスト
+function getWatchlist(){ try{ return new Set(JSON.parse(localStorage.getItem('watchlist')||'[]')); }catch(_){ return new Set(); } }
+function toggleWatch(btn) {
+  var name = decodeURIComponent(btn.dataset.name);
+  var list = getWatchlist();
+  if (list.has(name)) { list.delete(name); btn.textContent='☆'; btn.classList.remove('watching'); }
+  else                { list.add(name);    btn.textContent='★'; btn.classList.add('watching'); }
+  localStorage.setItem('watchlist', JSON.stringify([...list]));
+}
+function initWatchlist() {
+  var watching = getWatchlist();
+  document.querySelectorAll('.watch-btn').forEach(function(btn) {
+    if (watching.has(decodeURIComponent(btn.dataset.name))) { btn.textContent='★'; btn.classList.add('watching'); }
+  });
+}
 document.addEventListener('DOMContentLoaded', function() {
   var active = document.querySelector('.tab-panel.active');
   if (active) {
@@ -258,6 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
       btt.style.display = window.scrollY > 400 ? 'flex' : 'none';
     }, { passive: true });
   }
+  initWatchlist();
 });
 </script>
 </body>
