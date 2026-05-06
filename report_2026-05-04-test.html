@@ -111,6 +111,10 @@ li{margin-bottom:5px}
 /* Back to top */
 .back-to-top{position:fixed;bottom:28px;right:24px;width:40px;height:40px;background:rgba(99,102,241,.15);color:#818cf8;border:1px solid rgba(99,102,241,.3);border-radius:50%;font-size:16px;cursor:pointer;display:none;align-items:center;justify-content:center;transition:all .2s;backdrop-filter:blur(8px);z-index:200}
 .back-to-top:hover{background:rgba(99,102,241,.28);transform:translateY(-2px)}
+.mention-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
+.history-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.history-chip{font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(129,140,248,.08);color:#818cf8;border:1px solid rgba(129,140,248,.15)}
+.history-chip.streak{background:rgba(52,211,153,.08);color:#34d399;border-color:rgba(52,211,153,.2)}
 /* Mobile */
 @media(max-width:600px){
   .header h1{font-size:22px}
@@ -152,10 +156,12 @@ li{margin-bottom:5px}
     <span class="code">5711.T</span>
     <span class="badge badge-jp">JP</span>
     <span class="cap-badge">大型株（時価総額1兆円超/米10B$超）</span>
+    
     <span class="verdict" style="background:#22d3ee1a;color:#22d3ee;border:1px solid #22d3ee44">○推奨</span>
     <span class="conf">確信度: 中</span>
   </div>
   <div class="body">
+    <div class="history-row"><span class="history-chip">1回登場</span><span class="history-chip">前回 2026-05-04: ○推奨</span></div>
     
 <div class="chart-section">
   <div class="lbl">📈 チャート・株価リンク（TSE:5711）</div>
@@ -178,21 +184,21 @@ li{margin-bottom:5px}
     <div class="lbl">📺 参考動画</div>
     <div class="sources"><a class="src" href="https://www.youtube.com/watch?v=uiDVbWHsAGU" target="_blank" rel="noopener">【話題株】深掘りラボ</a></div>
     <div class="lbl">🏗 構造的成長根拠 <span class="lbl-hint">— この銘柄が中長期で成長できる理由</span></div>
-    <p>三菱マテリアルは、レアアースの再利用や都市鉱山など、資源の循環型利用に強みを持つ。政府の支援や脱炭素化の流れを受け、高まる資源需要に対応できる構造。幅広い事業領域を持つため、景気変動の影響を受けにくく、安定的な成長が期待できる。</p>
+    <p>三菱マテリアルは、非鉄金属の再利用事業への注力と、超硬工具事業の技術力、そして自動車、航空機などの産業向けに素材と加工技術の両方を提供する強みを持つ。都市鉱山からの資源回収は、資源枯渇への対応と環境負荷低減に貢献し、持続可能な成長を支える。中国輸出規制への対応も進んでいる。</p>
     <div class="lbl">🚀 成長ドライバー <span class="lbl-hint">— 具体的な成長エンジン</span></div>
-    <ul class="driver-list"><li>レアアースの再利用事業の拡大</li><li>都市鉱山からの資源回収技術の向上</li><li>自動車部材・電子材料の需要増加</li></ul>
+    <ul class="driver-list"><li>都市鉱山からのレアアース等の資源再利用事業の拡大</li><li>自動車・航空機向け超硬工具の需要増加（EVシフト、軽量化)</li><li>非鉄金属市場の成長（EV、再生可能エネルギー関連）</li></ul>
     <div class="lbl">🔟 テンバガーポテンシャル <span class="lbl-hint">— 10倍達成の条件と可能性</span></div>
-    <p>現在の株価水準から10倍達成は困難だが、レアアース再利用事業が予想を大きく上回る成長を遂げ、資源価格の上昇と相まって、株価が大きく上昇する可能性はゼロではない。そのためには、技術革新と市場シェアの拡大が不可欠。</p>
+    <p>現在の株価水準から10倍達成は困難だが、都市鉱山事業の成功と非鉄金属市場の成長がシナジーを生み、株価上昇の潜在力を持つ。特に、再利用技術の確立とコスト削減による収益性向上が鍵となる。政府の支援策も追い風となり得る。</p>
     <div class="lbl">🔍 なぜまだ割安に放置されているのか <span class="lbl-hint">— 市場が気づいていない理由</span></div>
-    <p>三菱マテリアルの資源リサイクル事業は、まだ市場全体に広く認知されていない。また、PERが44.6と高めであるため、短期的な株価上昇は期待しにくい。しかし、長期的な成長ポテンシャルは高く、割安に放置されている。</p>
+    <p>都市鉱山事業はまだ初期段階であり、収益への貢献が限定的であるため、市場の期待は低い。また、中国輸出規制の影響や、非鉄金属価格の変動リスクも懸念されている。バフェットの視点のように、長期的な成長ポテンシャルが十分に理解されていない。</p>
     <div class="lbl">📊 財務・バリュエーション評価 <span class="lbl-hint">— PER・PBR・配当からみた割安度</span></div>
-    <p>PERは高めだが、実績PERと予想PERの乖離が小さく、収益の安定性を示唆。PBRは0.93と適正水準。配当利回りは1.96%と、大型株としては平均的な水準。時価総額は巨大であり、安定成長が期待できる。</p>
+    <p>PER44.6は高水準だが、実績PERと予想PERの乖離が小さく、今後の成長期待を織り込んでいる。PBR0.93は適正水準。配当利回り1.96%は、大型株としては平均的。収益性の高さと成長性を考慮すると、割高感は限定的。</p>
     <div class="lbl">📌 エントリー戦略 <span class="lbl-hint">— 推奨する買い方・タイミング</span></div>
-    <p>高値警戒の5153円付近で様子見。5000円付近での押し目買いを検討。分散投資を心がけ、ポートフォリオの一部として組み込む。長期保有を前提に、配当金 reinvesting を推奨。</p>
+    <p>高値警戒し、PER20前後で分割購入を推奨。分散投資の一環として、ポートフォリオの一部に組み込む。配当金再投資による複利効果も期待できる。</p>
     <div class="lbl">⚠️ リスク要因 <span class="lbl-hint">— 投資前に把握すべきリスク</span></div>
-    <ul><li>レアアース再利用事業の技術的な課題</li><li>資源価格の変動リスク</li><li>地政学的なリスク</li></ul>
+    <ul><li>中国輸出規制の長期化と影響</li><li>非鉄金属価格の変動リスク</li><li>都市鉱山事業の技術開発と収益化の遅延</li></ul>
     <div class="lbl">🎯 3〜5年成長シナリオ <span class="lbl-hint">— 総合的な投資判断</span></div>
-    <div class="conclusion">3〜5年後には、レアアース再利用事業が収益に大きく貢献し、株価上昇の原動力となる可能性が高い。ただし、資源価格の変動や地政学的なリスクには注意が必要。長期的な視点で、慎重に投資判断を行うべき。現状では○推奨。</div>
+    <div class="conclusion">3〜5年で都市鉱山事業が軌道に乗り、非鉄金属市場の成長と相乗効果を発揮すれば、株価は上昇余地がある。ただし、中国経済の動向や資源価格の変動に注意が必要。慎重に長期投資を検討すべきであり、現状では○推奨。</div>
   </div>
 </div></div>
   <div id="tab-us"     class="tab-panel"><p class="no-data">本日の候補なし</p></div>
