@@ -116,6 +116,14 @@ li{margin-bottom:5px}
 .history-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .history-chip{font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(129,140,248,.08);color:#818cf8;border:1px solid rgba(129,140,248,.15)}
 .history-chip.streak{background:rgba(52,211,153,.08);color:#34d399;border-color:rgba(52,211,153,.2)}
+.change-badge{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.change-badge.up{background:rgba(52,211,153,.1);color:#34d399;border:1px solid rgba(52,211,153,.25)}
+.change-badge.down{background:rgba(251,113,133,.1);color:#fb7185;border:1px solid rgba(251,113,133,.25)}
+.toggle-btn{background:none;border:1px solid #1c2a40;cursor:pointer;color:#475569;font-size:10px;padding:3px 9px;border-radius:6px;transition:all .15s;flex-shrink:0;font-family:inherit}
+.toggle-btn:hover{color:#818cf8;border-color:rgba(129,140,248,.4)}
+.card.collapsed .body{display:none}
+.news-link-btn{font-size:11px;padding:2px 7px;border-radius:6px;background:rgba(34,211,238,.07);color:#22d3ee;border:1px solid rgba(34,211,238,.15);text-decoration:none;transition:all .15s;flex-shrink:0}
+.news-link-btn:hover{background:rgba(34,211,238,.15)}
 /* Mobile */
 /* Filter bar */
 .filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #1c2a40}
@@ -231,6 +239,11 @@ function initWatchlist() {
   document.querySelectorAll('.watch-btn').forEach(function(btn) {
     if (watching.has(decodeURIComponent(btn.dataset.name))) { btn.textContent='★'; btn.classList.add('watching'); }
   });
+}
+function toggleCard(btn) {
+  var card = btn.closest('.card');
+  var col = card.classList.toggle('collapsed');
+  btn.textContent = col ? '展開 ▼' : '折りたたむ ▲';
 }
 document.addEventListener('DOMContentLoaded', function() {
   var active = document.querySelector('.tab-panel.active');
